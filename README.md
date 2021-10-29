@@ -52,7 +52,9 @@ Activation Keys | ak-ops-rhel8-prem-server
 
 Copy the curl Command and login in to the RHEL VM you will be registering with Satellite.
 
-At terminal using sudo or root you will first unregister from Subscription Manager and then run Subscription Manage clean command
+![Copy curl command](/image/sat89.png)
+
+At a terminal on the RHEL VM you subscribing to Satellite, use sudo or root you to first unregister from Subscription Manager and then run the Subscription Manager clean command
 ```
 # subscription-manager unregister 
 Unregistering from: subscription.rhsm.redhat.com:443/subscription
@@ -60,5 +62,5 @@ System has been unregistered.
 #subscription-manager clean
 All local data removed
 ```
-Now past and run the curl command that you copied from Satellite.  Watch the output for any errors.  
+Now past and run the curl command that you copied from Satellite.  Watch the output for any errors.  If successfull, you are all set.
 
