@@ -40,11 +40,17 @@ On the Content Host Registration button we will click the blue Register Host lin
 
 ![Blue Register Hosts link](/images/sat88.png)
 
-On the Registrations > Register host page fill in or chose options from the following table, and click the blue Submit button.
+On the Registrations > Register host page fill in or chose options from the following table, and click the blue Generate command button.   Note: My example servers were previosuly registered to the Red Hat Subscription Manage and Insights.  In this step I'm chosing not to 
 
 Name | Choice
 ---- | ------
 Host Group | hg-
 Operating System | RedHat 8.4
 Capsule | sat01.example.com
+Setup Insights | No
+Insecure | check
 Activation Keys | ak-ops-rhel8-prem-server
+
+
+
+curl --insecure -X GET "https://sat01.example.com:9090/register?activation_key=ak-ops-rhel8-prem-server&hostgroup_id=4&location_id=4&operatingsystem_id=4&organization_id=3" -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJpYXQiOjE2MzU1MjEyMTUsImp0aSI6IjFlNzkyMGRkZTNiNDdiNTU4OTFjMjFmZjU0MmU1MjkwN2VkYzZiZDgxYjU1ODZlZDdjOTk2YjIyODdhYmRmOTgiLCJleHAiOjE2MzU1MzU2MTV9.T8rdLD4UOqOxzxReDUOBvzAvU69LZESA7mFWv_l0SyQ' | bash
