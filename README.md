@@ -62,5 +62,7 @@ System has been unregistered.
 #subscription-manager clean
 All local data removed
 ```
-Now past and run the curl command that you copied from Satellite.  Watch the output for any errors.  If successfull, you are all set.
+In the terminal, paste the curl command into the terminal and press the enter key.   Watch the output for any errors.  If the commandy completed with all success, you are all set.  
+
+If your return the Hosts -> Content Hosts page you will now see your newel added RHEL VM.
 
