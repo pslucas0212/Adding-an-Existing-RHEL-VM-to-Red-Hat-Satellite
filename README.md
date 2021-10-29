@@ -27,3 +27,24 @@ Family | Red Hat
 Architecture | x86_64
 
 ![Define Operating System](/images/sat85.png)
+
+Next go to the left side navibation bar chose Hosts -> Content Hosts.
+
+![Hosts -> Content Hosts](/images/sat86.png)
+
+On the Content Hosts page clock the Register Content Host button.
+
+![Register Content Host](/images/sat87.png)
+
+On the Content Host Registration button we will click the blue Register Host link and follow the new process for registering hosts.
+
+![Blue Register Hosts link](/images/sat88.png)
+
+On the Registrations > Register host page fill in or chose options from the following table, and click the blue Submit button.
+
+Name | Choice
+---- | ------
+Host Group | hg-
+Operating System | RedHat 8.4
+Capsule | sat01.example.com
+Activation Keys | ak-ops-rhel8-prem-server
