@@ -40,17 +40,25 @@ On the Content Host Registration button we will click the blue Register Host lin
 
 ![Blue Register Hosts link](/images/sat88.png)
 
-On the Registrations > Register host page fill in or chose options from the following table, and click the blue Generate command button.   Note: My example servers were previosuly registered to the Red Hat Subscription Manage and Insights.  In this step I'm chosing not to 
+On the Registrations > Register host page fill in or choose options from the following table, and click the blue Generate command button.   Note: If your VM has been previously registered to Insights, you could choose No for Insights setup.  For simplicity of the lab I have not copied Satellite's SSL certificate to  the target VM, so I have to chose an Insecure connection.
 
 Name | Choice
 ---- | ------
 Host Group | hg-
-Operating System | RedHat 8.4
+Operating System | RedHat 8.3
 Capsule | sat01.example.com
-Setup Insights | No
 Insecure | check
 Activation Keys | ak-ops-rhel8-prem-server
 
+Copy the curl Command and login in to the RHEL VM you will be registering with Satellite.
 
+At terminal using sudo or root you will first unregister from Subscription Manager and then run Subscription Manage clean command
+```
+# subscription-manager unregister 
+Unregistering from: subscription.rhsm.redhat.com:443/subscription
+System has been unregistered.
+#subscription-manager clean
+All local data removed
+```
+Now past and run the curl command that you copied from Satellite.  Watch the output for any errors.  
 
-curl --insecure -X GET "https://sat01.example.com:9090/register?activation_key=ak-ops-rhel8-prem-server&hostgroup_id=4&location_id=4&operatingsystem_id=4&organization_id=3" -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJpYXQiOjE2MzU1MjEyMTUsImp0aSI6IjFlNzkyMGRkZTNiNDdiNTU4OTFjMjFmZjU0MmU1MjkwN2VkYzZiZDgxYjU1ODZlZDdjOTk2YjIyODdhYmRmOTgiLCJleHAiOjE2MzU1MzU2MTV9.T8rdLD4UOqOxzxReDUOBvzAvU69LZESA7mFWv_l0SyQ' | bash
