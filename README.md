@@ -1,4 +1,4 @@
-# Future Tutorial: Adding an Existing RHEL VM to Satellite
+# Adding an Existing RHEL VM to Red Hat Satellite
 
 [Tutorial Menu](https://github.com/pslucas0212/RedHat-Satellite-VM-Provisioning-to-vSphere-Tutorial)  
 
