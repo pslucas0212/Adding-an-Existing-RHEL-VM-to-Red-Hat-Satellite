@@ -4,9 +4,11 @@
 
 ## Registering an Exsiting RHEL VM to Satellite
 
-For simplicity of the example we will use the Operations Derpartment Organization and moline operation along with 
+In our previous multi-part Red Hat Satellite tutorial — [How to provision a RHEL VM from Red Hat Satellite](https://www.redhat.com/en/blog/how-install-red-hat-satellite) — we covered an end-to-end scenario for provisioning Red Hat Enterprise Linux (RHEL) VMs from Satellite to a VMWare cluster. 
 
-In this tutorial we will add an existing RHEL VM to Satellite for content management.  
+In many organizations not all Red Hat Enterprise Linux VMs are provisioned through Red Hat Satellite.  At some point you may want to bring these RHEL VMs to Red Hat Satellite for content management.  In this tutorial, we extend the work of the previous tutorial by providing step-by-step instructions add an existing RHEL VM to to an exsisting Red Hat Satellite instance.   
+
+Let's make sure
 
 If you don't already have an operating system defined in the host section we will need to do that first.  On the left side navibation bar chose Hosts -> Operating Systems.
 
